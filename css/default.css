@@ -1,0 +1,52 @@
+
+#wrap{
+    width:100%;
+}
+#container{
+    position:relative;
+    margin: 0 auto;
+    width: 100vw;
+}
+
+.title {
+    padding-bottom: 100px;
+}
+.gallery-container {
+    position: relative;
+    
+}
+.gallery-item {
+    position: sticky;
+    top: 0;
+    padding-bottom: 15vw;
+
+    /* scroll-timeline: none block;
+    /* Firefox supports the older "vertical" syntax */
+    /* scroll-timeline: none vertical; */
+
+    view-timeline: --subjectReveal block;
+}
+
+.gallery-img {
+    animation-name: fadeIn;
+    animation-duration: auto; /* Firefox requires this to apply the animation */
+    animation-timeline: --subjectReveal
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
