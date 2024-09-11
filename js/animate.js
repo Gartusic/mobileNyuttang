@@ -65,8 +65,13 @@ const observeFunc = () => {
 
 const pageLoadFunc = () => {
 	document.addEventListener("DOMContentLoaded", () => {
-		observeFunc();
+		// observeFunc();
+		console.log("document.addEventListener")
 	});
+	window.addEventListener('load', () => {
+		console.log("window.addEventListener")
+	})
+	
 }
 
 const init = () => {

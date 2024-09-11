@@ -18,7 +18,7 @@
 .gallery-item {
     position: sticky;
     top: 0;
-    padding-bottom: 15vw;
+    padding-bottom: 10vw;
 
     /* scroll-timeline: none block;
     /* Firefox supports the older "vertical" syntax */
@@ -46,7 +46,7 @@
     0% {
         opacity: 0;
     }
-    50% {
+    35% {
         opacity: 1;
     }
 }
