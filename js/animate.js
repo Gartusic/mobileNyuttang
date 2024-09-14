@@ -64,12 +64,29 @@ const observeFunc = () => {
 
 
 const pageLoadFunc = () => {
+
 	document.addEventListener("DOMContentLoaded", () => {
-		// observeFunc();
-		console.log("document.addEventListener")
+		observeFunc();
 	});
+
 	window.addEventListener('load', () => {
-		console.log("window.addEventListener")
+		
+		const spinnerClass = document.querySelector('.loading-spinner');
+		const containerClass = document.querySelector('.container');
+
+		spinnerClass.classList.add('fade-out');
+		containerClass.classList.add('fade-out');
+
+		setTimeout(() => {
+
+			spinnerClass.style.display = 'none';
+			// containerId.classList.add('fade-in');
+			containerClass.style.display = 'block';
+			containerClass.classList.replace('fade-out', 'fade-in');
+
+		}, 1000)
+		// loading end start
+		
 	})
 	
 }
