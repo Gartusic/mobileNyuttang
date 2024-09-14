@@ -1,87 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta made-by="jaehoAndJuhee">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta made-by="jaehoAndJuhee" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to our wedding</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/default.css" />
     <script src="./js/animate.js" type="module" defer></script>
-</head>
-<body>
-
-    <div class="loading-spinner">
-    </div>
+  </head>
+  <body>
+    <div class="loading-spinner"></div>
 
     <div id="wrap">
-        <div class="container">
-            <!-- title start -->
-            <section class="title">
-                <div class="title-img">
-                    <img src="./source/images/title.jpg" alt="사진 1">
-                </div> 
-            </section>
-            <!-- title end  -->
+      <div class="container">
+        <!-- title start -->
+        <section class="title">
+          <div class="title-img">
+            <img src="./source/images/title.jpg" alt="사진 1" />
+          </div>
+        </section>
+        <!-- title end  -->
 
-            <!-- calendar start -->
-            <section class="calendar">
-                <img src="./source/images/calendar.gif" alt="갤러리 시작"> 
-            </section>
-            <!-- calendar end -->
+        <!-- calendar start -->
+        <section class="calendar">
+          <img src="./source/images/calendar.gif" alt="갤러리 시작" />
+        </section>
+        <!-- calendar end -->
 
-            <!-- gallery start -->
-            <section class="gallary-start">
-                <img src="./source/images/gallary-start.jpg" alt="갤러리 시작">
-            </section>
-            <section class="gallery-container">
-                <div class="gallery-item">
-                    <img class="gallery-img" src="./source/images/gallary-images/갤러리2.jpg" alt="사진 1">
-                </div>
-                <div class="gallery-item">
-                    <img class="gallery-img" src="./source/images/gallary-images/갤러리3.jpg" alt="사진 2">
-                </div>
-                <div class="gallery-item">
-                    <img class="gallery-img" src="./source/images/gallary-images/갤러리4.jpg" alt="사진 3">
-                </div>
-                <div class="gallery-item">
-                    <img class="gallery-img" src="./source/images/gallary-images/갤러리5.jpg" alt="사진 4">
-                </div>
-                <div class="gallery-item">
-                    <img class="gallery-img" src="./source/images/gallary-images/갤러리6.jpg" alt="사진 5">
-                </div>
-                <div class="gallery-item ">
-                    <img class="gallery-img" src="./source/images/gallary-images/갤러리.jpg" alt="사진 6">
-                </div>
-                <div class="gallery-end">
-                    
-                </div>
-            </section>
-            <!-- gallery end -->
-            
-            <!-- greetings start -->
-            <section class="greetings">
-                <img src="./source/images/greetings.jpg" alt="인삿말">
-            </section>
-            <!-- greetings end -->
-            
-            
-            <!-- account start -->
-            <section class="accounts">
-                <div>husband famliy account</div>
-                <div>wife famliy account</div>
-            </section>
-            <!-- account start -->
-            
-            <!-- coming map start -->
-            <section class="map">
-                <a href="https://place.map.kakao.com/358362085">
-                    <img src="./source/images/map.jpg" alt="오시는길">
-                </a>
-            </section>
-            <!-- coming map end -->
-        </div>
+        <!-- D-Day start -->
+        <section class="d-day-section">
+          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <td height="10" align="center" valign="middle" class="">
+                  신랑신부님의 예식일까지 <br />
+                  <span class="d-day-left-countdown"></span>
+                  남았습니다.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <!-- D-Day end -->
+
+        <!-- gallery start -->
+        <section class="gallary-start">
+          <img src="./source/images/gallary-start.jpg" alt="갤러리 시작" />
+        </section>
+        <section class="gallery-container">
+          <div class="gallery-item">
+            <img
+              class="gallery-img"
+              src="./source/images/gallary-images/갤러리2.jpg"
+              alt="사진 1"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              class="gallery-img"
+              src="./source/images/gallary-images/갤러리3.jpg"
+              alt="사진 2"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              class="gallery-img"
+              src="./source/images/gallary-images/갤러리4.jpg"
+              alt="사진 3"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              class="gallery-img"
+              src="./source/images/gallary-images/갤러리5.jpg"
+              alt="사진 4"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              class="gallery-img"
+              src="./source/images/gallary-images/갤러리6.jpg"
+              alt="사진 5"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              class="gallery-img"
+              src="./source/images/gallary-images/갤러리.jpg"
+              alt="사진 6"
+            />
+          </div>
+          <div class="gallery-end"></div>
+        </section>
+        <!-- gallery end -->
+
+        <!-- greetings start -->
+        <section class="greetings">
+          <img src="./source/images/greetings.jpg" alt="인삿말" />
+        </section>
+        <!-- greetings end -->
+
+        <!-- wedding quick menu start -->
+        <section class="quick-menu-start" style="background-color: #f2f2f2">
+            <img src="./source/images/wedding-quick-menu.jpg" alt="">
+            <table
+            width="100%"
+            border="0"
+            cellspacing="0"
+            cellpadding="0"
+            style="background-color: #f2f2f2"
+            >
+                <tbody>
+                    <tr>
+                        <td width="20%" align="center">
+                        <a href="tel:010-2781-3969">
+                            <img
+                            src="./source/images/btn1.jpg"
+                            width="100%"
+                            border="0" /></a
+                        ><!--2번 20%-->
+                        </td>
+                        <td width="20%" align="center">
+                        <a href="sms:010-2781-3969">
+                            <img
+                            src="./source/images/btn2.jpg"
+                            width="100%"
+                            border="0" /></a
+                        ><!--3번 20%-->
+                        </td>
+                        <td width="20%" align="center">
+                        <a href="tel:010-7608-7605"
+                            ><img
+                            src="./source/images/btn3.jpg"
+                            width="100%"
+                            border="0" /></a
+                        ><!--4번 20%-->
+                        </td>
+                        <td width="20%" align="center">
+                        <a href="sms:010-7608-7605"
+                            ><img
+                            src="./source/images/btn4.jpg"
+                            width="100%"
+                            border="0" /></a
+                        ><!--5번 20%-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- wedding quick menu end -->
+        <!-- account start -->
+        <section class="accounts">
+          <div>husband famliy account</div>
+          <div>wife famliy account</div>
+        </section>
+        <!-- account start -->
+
+        <!-- coming map start -->
+        <section class="map">
+          <a href="https://place.map.kakao.com/358362085">
+            <img src="./source/images/map.jpg" alt="오시는길" />
+          </a>
+        </section>
+        <!-- coming map end -->
+      </div>
     </div>
-</body> 
+  </body>
 </html>

@@ -91,8 +91,45 @@ const pageLoadFunc = () => {
 	
 }
 
+/**
+ * 일, 시간, 분, 초를 남은 시간을 통해서 알 수 있게
+ * 	<span class="d-day-left-day"></span>일 
+	<span class="d-day-left-hours"></span>시간 
+	<span class="d-day-left-minutes"></span>분 
+	<span class="d-day-left-seconds"></span>초
+ */
+
+const dDay = new Date("2024-11-09T12:00:00").getTime();
+const dDayLeftShow = () => {
+	const leftCountdown = document.querySelector(".d-day-left-countdown"); 
+
+	const now = new Date().getTime();
+	const distance = dDay - now;
+
+	// 시간 계산
+	const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+	// 결과 출력
+	leftCountdown.innerHTML =
+		days + "일 " + hours + "시간 " + minutes + "분 " + seconds + "초 ";
+
+	// 시간이 끝나면 메시지 표시
+	if (distance < 0) {
+		clearInterval(countdownInterval);
+		document.getElementById("countdown").innerHTML = "D-day가 지났습니다!";
+	}	
+
+}
+
+
+// start init
+
 const init = () => {
 	pageLoadFunc();
+	setInterval(dDayLeftShow, 1000);
 }
 
 init();
