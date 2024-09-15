@@ -11,9 +11,11 @@
     <script src="./js/animate.js" type="module" defer></script>
   </head>
   <body>
-    <div class="loading-spinner"></div>
-
     <div id="wrap">
+      <!-- loading spinner -->
+      <div class="loading-spinner"></div>
+      <!-- loading spinner end -->
+
       <div class="container">
         <!-- title start -->
         <section class="title">
@@ -151,12 +153,6 @@
             </table>
         </section>
         <!-- wedding quick menu end -->
-        <!-- account start -->
-        <section class="accounts">
-          <div>husband famliy account</div>
-          <div>wife famliy account</div>
-        </section>
-        <!-- account start -->
 
         <!-- coming map start -->
         <section class="map">
@@ -165,7 +161,40 @@
           </a>
         </section>
         <!-- coming map end -->
+
+        <!-- heart send start -->
+        <section class="heart-send">
+          <img src="./source/images/heart-send.jpg" alt="heart-send">
+        </section> 
+        <!-- heart send end -->
+        <!-- account start -->
+        <section class="accounts">
+          <div class="account-husband">
+            husband famliy account
+            <button class="modal-show-btn">husband open modal</button>
+          </div>
+          <div class="account-wife">wife famliy account
+            <button class="modal-show-btn">wife open modal</button>
+          </div>
+
+        </section>
+        <!-- account start -->
+      </div>
+      
+    </div>
+
+    <!-- modal start -->
+    <div id="modal-container">
+      <div class="modal">
+        <div class="modal-contents">
+          <span class="close modal-close-btn">&times;</span>
+          <p>모달 내용</p>
+        </div>
       </div>
     </div>
+    <!-- modal end -->
+
+
+    
   </body>
 </html>
