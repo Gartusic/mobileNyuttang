@@ -104,15 +104,20 @@ const dDayLeftShow = () => {
  */
 
 const modalHTMLShowFunc = (accountSex) => {
-
+	if(accountSex !== null){
+		accountSex = accountSex.split(" ")
+	} else{
+		return;
+	}
 	// changed information by the accountSex param
 	let name = ""; // name
 	let onsideName = ""; // 신부측, 신랑측
 	let accounts = [];
 	
 	const modalContents = document.querySelector(".modal-contents");
-
-	if (String(accountSex) === "account-husband") {
+	modalContents.innerHTML = "";
+	
+	if (String(accountSex[0]) === "account-husband") {
 		name = "신랑 한재호"
 		onsideName = "신랑측"
 		accounts = [
@@ -120,7 +125,7 @@ const modalHTMLShowFunc = (accountSex) => {
 			{ bank: '신한은행', holder: '한재호', number: '110-534-833811' }		
 		];
 		
-	} else if (String(accountSex) === "account-wife") {
+	} else if (String(accountSex[0]) === "account-wife") {
 		name = "신부 이주희"
 		onsideName = "신부측"
 		accounts = [
@@ -128,13 +133,7 @@ const modalHTMLShowFunc = (accountSex) => {
 			{ bank: '농협', holder: '정다교', number: '815074-56-101-001' },
 			{ bank: '카카오뱅크', holder: '이주희', number: '3333-06-6845-889' }
 		];
-	} else {
-		modalContents.innerHTML = "";
-		return;
 	}
-
-
-
 	// from this time, rendering HTML
 	let wholeSection = document.createElement('div');
 
@@ -228,15 +227,15 @@ const modalFunc = () => {
 	const toggleModal = (event) => {
 		modal.classList.toggle("show");
 
-		// console.log(event.target.parentElement.classList.value);
+		const eventTarget = event.target.classList.value
+		console.log(eventTarget)
 
 		if (!event) {
 			modalHTMLShowFunc(null);
 			return;
 		}
 
-		const eventTargetParent = event.target.parentElement.classList.value
-		modalHTMLShowFunc(eventTargetParent);
+		modalHTMLShowFunc(eventTarget);
 
 	}
 

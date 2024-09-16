@@ -6,8 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to our wedding</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
+    <!-- style -->
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/default.css" />
+    
     <script src="./js/animate.js" type="module" defer></script>
   </head>
   <body>
@@ -15,7 +21,7 @@
       <!-- loading spinner -->
       <div class="loading-spinner"></div>
       <!-- loading spinner end -->
-
+      
       <div class="container">
         <!-- title start -->
         <section class="title">
@@ -24,7 +30,12 @@
           </div>
         </section>
         <!-- title end  -->
-
+        <!-- greetings start -->
+        <section class="greetings">
+          <img src="./source/images/greetings.jpg" alt="인삿말" />
+        </section>
+        <!-- greetings end -->
+        
         <!-- calendar start -->
         <section class="calendar">
           <img src="./source/images/calendar.gif" alt="갤러리 시작" />
@@ -36,8 +47,8 @@
           <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tbody>
               <tr>
-                <td height="10" align="center" valign="middle" class="">
-                  신랑신부님의 예식일까지 <br />
+                <td height="10" align="center" valign="middle" class="notice">
+                  재호 ♥ 주희의 예식일까지 <br />
                   <span class="d-day-left-countdown"></span>
                   남았습니다.
                 </td>
@@ -98,11 +109,6 @@
         </section>
         <!-- gallery end -->
 
-        <!-- greetings start -->
-        <section class="greetings">
-          <img src="./source/images/greetings.jpg" alt="인삿말" />
-        </section>
-        <!-- greetings end -->
 
         <!-- wedding quick menu start -->
         <section class="quick-menu-start" style="background-color: #f2f2f2">
@@ -169,13 +175,12 @@
         <!-- heart send end -->
         <!-- account start -->
         <section class="accounts">
-          <div class="account-husband">
-            husband famliy account
-            <button class="modal-show-btn">husband open modal</button>
-          </div>
-          <div class="account-wife">wife famliy account
-            <button class="modal-show-btn">wife open modal</button>
-          </div>
+          <a class="account-husband modal-show-btn">
+            신랑측 계좌번호
+          </a>
+          <a class="account-wife modal-show-btn">
+            신부측 계좌번호
+          </a>
 
         </section>
         <!-- account start -->
