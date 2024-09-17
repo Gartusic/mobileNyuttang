@@ -167,15 +167,15 @@ body{
   
     transform: scale(0.8);
 }
-.modal-contents h1{
+.modal-contents h1 {
     margin-bottom: 10px;
     display: block;
 }
 .modal-contents h1 > span{
     font-size: larger;
 }
-.modal-contents h1 > strong{
-    text-align: left;
+.modal-contents h1 > strong {
+    text-align: right;
 }
 .modal.show {
     /* 모달이 열렸을 때 보여지게 하는 코드 */
@@ -200,6 +200,35 @@ body{
 .close:hover {
     color: black;
 }
+
+.modal-contents p {
+    padding : 8px
+}
+
+.copy-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding : 2px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.copy-btn:hover {
+    background-color: #45a049;
+}
+
+.copy-btn:active {
+    background-color: #3e8e41;
+}
+
+.modal-li {
+    padding-top : 10px;
+    padding-bottom : 5px;
+}
+
 
 
 /* account modal all stop */
