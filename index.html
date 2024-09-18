@@ -8,8 +8,8 @@
     <title>Welcome to our wedding</title>
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Nanum+Gothic:wght@400;700;800&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
     <!-- style -->
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/default.css" />
@@ -26,7 +26,13 @@
         <!-- title start -->
         <section class="title">
           <div class="title-img">
-            <img src="./source/images/title.jpg" alt="사진 1" />
+            <div class="text-wrap">
+              <h1>한재호와 이주희<br> 결혼식에 초대합니다. </h1>
+              <p>2024년 11월 9일, 낮 12시</p>
+              <p>UCC 울산 시티 컨벤션 1층</p>
+              <p>예그리나 홀</p>  
+            </div>
+            <!-- <img src="./source/images/title.jpg" alt="사진 1" /> -->
           </div>
         </section>
         <!-- title end  -->
@@ -60,7 +66,8 @@
 
         <!-- gallery start -->
         <section class="gallary-start">
-          <img src="./source/images/gallary-start.jpg" alt="갤러리 시작" />
+          <h2>갤러리</h2>
+          <!--<img src="./source/images/gallary-start.jpg" alt="갤러리 시작" />-->
         </section>
         <section class="gallery-container">
           <div class="gallery-item">
@@ -111,52 +118,24 @@
 
 
         <!-- wedding quick menu start -->
-        <section class="quick-menu-start" style="background-color: #f2f2f2">
-            <img src="./source/images/wedding-quick-menu.jpg" alt="">
-            <table
-            width="100%"
-            border="0"
-            cellspacing="0"
-            cellpadding="0"
-            style="background-color: #f2f2f2"
-            >
-                <tbody>
-                    <tr>
-                        <td width="20%" align="center">
-                        <a href="tel:010-2781-3969">
-                            <img
-                            src="./source/images/btn1.jpg"
-                            width="100%"
-                            border="0" /></a
-                        ><!--2번 20%-->
-                        </td>
-                        <td width="20%" align="center">
-                        <a href="sms:010-2781-3969">
-                            <img
-                            src="./source/images/btn2.jpg"
-                            width="100%"
-                            border="0" /></a
-                        ><!--3번 20%-->
-                        </td>
-                        <td width="20%" align="center">
-                        <a href="tel:010-7608-7605"
-                            ><img
-                            src="./source/images/btn3.jpg"
-                            width="100%"
-                            border="0" /></a
-                        ><!--4번 20%-->
-                        </td>
-                        <td width="20%" align="center">
-                        <a href="sms:010-7608-7605"
-                            ><img
-                            src="./source/images/btn4.jpg"
-                            width="100%"
-                            border="0" /></a
-                        ><!--5번 20%-->
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <h2>연락처</h2>
+        <section class="quick-menu-start">
+          <ul>
+            <li>
+              <p>
+                <label for="groom-tel">신랑 한재호</label>
+                <a id="groom-tel" href="tel:010-2781-3969">
+                </a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <label for="bride-tel">신부 이주희</label>
+                <a id="bride-tel" href="sms:010-7608-7605">
+                </a>
+              </p>
+            </li>
+          </ul>
         </section>
         <!-- wedding quick menu end -->
 
@@ -189,7 +168,7 @@
         <!-- celebrity flower -->
         <section class="celebrity-flower">
             <a href="https://docs.google.com/forms/d/1uaD-Z4_h6JrgovfQwjMQFGXXDItV0E1Fn2qETwhKaiY/edit?pli=1#responses">
-                <img src="./source/images/celebrity-flower.jpg" alt="celebrity-flower">
+                화환 신청 접수하기
             </a>
         </section>
 

@@ -1,5 +1,5 @@
 body{
-    font-family: "Diphylleia", serif;
+    font-family: "Nanum Myeongjo", serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -11,7 +11,6 @@ body{
     margin : 20px 20px 50px 20px;
 }
 .container {
-
     /* for Page Document all loading */
     opacity: 0;
     transition: opacity 1s ease;
@@ -20,16 +19,103 @@ body{
     position:relative;
     margin: 0 auto;
     width: 100vw;
-    max-width: 500px;
+    max-width: 600px;
 }
-
+section{
+    margin : 3vh 1vw;
+    border-bottom: 3px #aaa;
+}
 .title {
     padding-bottom: 100px;
 }
 
-.gallery-container {
+/* 청첩장의 표지 디자인 */
+.title-img{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    height: 90vh;
     position: relative;
-    
+    background: url("../source/images/gallary-images/메인.jpg");
+    background-size : cover;
+    background-position: 60% 30%;
+    background-repeat: no-repeat;
+    border-radius: 60% 45% 60% 35%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 살짝 그림자 추가로 입체감 */
+}
+.title-img::before{
+    content:"";
+    opacity: 0.2;
+    background-color: #ffd3b3;
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    border-radius: 75% 35% 75% 25%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.title-img::after{
+    content:"";
+    opacity: 0.2;
+    background-color: #ffc0d5;
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    border-radius: 30% 70% 30% 70%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.title-img .text-wrap{
+    z-index:99;
+    font-size: 14px;
+    position : absolute;
+    top: 50%;
+    width: 100%;
+    line-height: 3em;
+    color: whitesmoke;
+    text-align: center;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
+}
+.title-img .text-wrap > h1{
+    font-size: 2.5em;
+}
+.title-img .text-wrap > p{
+    font-size: 1.5em;
+}
+
+h2{
+    text-align: right;
+    margin: 5vh 10vw 2vh 10vw;
+    color: white;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
+    font-size: 2em;
+    line-height: 2em;
+}
+h2>span{
+    font-size: 14px;
+}
+
+/*연락처*/
+.quick-menu-start ul,.quick-menu-start li p{
+    display:flex;
+    justify-content: space-around;
+}
+.quick-menu-start label{
+    margin-top : 20px;
+}
+#groom-tel,#bride-tel{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url("../source/images/tel.png");
+    background-size : cover;
+    background-position: 0%;
+    background-repeat: no-repeat;
+}
+
+.gallery-container {
+    position: relative;    
 }
 
 .gallery-item {
@@ -123,10 +209,15 @@ body{
 .modal-show-btn{
     width:40%;
     height: 30px;
+    line-height: 30px;
     padding : 10px;
+    cursor: pointer;
     display : inline-block;
     text-align:center;
     vertical-align: middle;
+    background-color:  #fde3d1;
+    border:1px #f7cfb2;
+    border-radius: 5px;
 }
 .modal {
     /* 스타일 - customize */
@@ -154,11 +245,11 @@ body{
 .modal-contents {
     /* 스타일 - customize */
     max-width: 90vw;
-    max-height: 70vh;
+    max-height: 80vh;
     width: auto;
     height: auto;
     background-color: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   
