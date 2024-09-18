@@ -106,7 +106,7 @@ const dDayLeftShow = () => {
 const modalHTMLShowFunc = (accountSex) => {
 	if(accountSex !== null){
 		accountSex = accountSex.split(" ")
-	} else{
+	} else {
 		return;
 	}
 	// changed information by the accountSex param
@@ -114,7 +114,7 @@ const modalHTMLShowFunc = (accountSex) => {
 	let onsideName = ""; // 신부측, 신랑측
 	let accounts = [];
 	
-	const modalContents = document.querySelector(".modal-contents");
+	const modalContents = document.querySelector(".modal-contents-in");
 	modalContents.innerHTML = "";
 	
 	if (String(accountSex[0]) === "account-husband") {
@@ -169,6 +169,7 @@ const modalHTMLShowFunc = (accountSex) => {
     // Iterate over account info to create list items
     accounts.forEach((account) => {
         let li = document.createElement('li');
+        li.classList.add("modal-li")
         
         // Create the name div
         let nameDiv = document.createElement('div');
@@ -185,6 +186,7 @@ const modalHTMLShowFunc = (accountSex) => {
         // Create the copy button
         let pCopy = document.createElement('p');
         let aCopy = document.createElement('a');
+        aCopy.classList.add("copy-btn");
         aCopy.textContent = '복사하기';
 		aCopy.addEventListener('click', (event) => {
 			event.preventDefault();
