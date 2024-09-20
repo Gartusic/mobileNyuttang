@@ -1,3 +1,9 @@
+:root{ 
+    /* css 전용 변수 선언 */
+    --groom-photo : url('../source/images/gallary-images/신랑독사진.jpg');
+    --bride-photo : url('../source/images/gallary-images/신부독사진.jpg');
+}
+
 body{
     font-family: "Nanum Myeongjo", serif;
     font-weight: 400;
@@ -87,8 +93,8 @@ section{
 h2{
     text-align: right;
     margin: 5vh 10vw 2vh 10vw;
-    color: white;
-    text-shadow: 3px 3px 3px rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    /* text-shadow: 3px 3px 3px rgb(255, 229, 209); */
     font-size: 2em;
     line-height: 2em;
 }
@@ -104,14 +110,47 @@ h2>span{
 .quick-menu-start label{
     margin-top : 20px;
 }
+
 #groom-tel,#bride-tel{
     display: block;
-    width: 50px;
+    width: 100%;
+    padding-right: 50px;
+    line-height: 50px;
     height: 50px;
+    color: #3b3b3b;
     background-image: url("../source/images/tel.png");
-    background-size : cover;
-    background-position: 0%;
+    background-size : contain;
+    background-position: right;
     background-repeat: no-repeat;
+}
+
+p:has(#groom-tel),p:has(#bride-tel){
+    width: 100%;
+    margin-bottom: 30vh;
+    position: relative;
+}
+
+p:has(#groom-tel)::after, p:has(#bride-tel)::after{
+    position: absolute;
+    top: 10vh;
+    content: "";
+    display: block;
+    height: 20vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+p:has(#groom-tel):hover:after, p:has(#bride-tel):hover:after{
+    position: fixed;
+    top:10vh;
+    transform: scale(80vh);
+}
+p:has(#groom-tel)::after{
+    background-image: var(--groom-photo);
+}
+p:has(#bride-tel)::after{
+    background-image: var(--bride-photo);
 }
 
 .gallery-container {
@@ -215,8 +254,9 @@ h2>span{
     display : inline-block;
     text-align:center;
     vertical-align: middle;
-    background-color:  #fde3d1;
-    border:1px #f7cfb2;
+    background-color: #ddd3d8;
+    color: white;
+    text-shadow: 2px 3px 4px rgba(0,0,0, 0.7);
     border-radius: 5px;
 }
 .modal {
@@ -261,7 +301,7 @@ h2>span{
 }
 .modal-contents h1 {
     margin-bottom: 10px;
-    display: block;
+    display: block; 
 }
 .modal-contents h1 > span{
     font-size: larger;
@@ -321,6 +361,45 @@ h2>span{
     padding-bottom : 5px;
 }
 
-
-
 /* account modal all stop */
+
+
+
+.celebrity-flower>a{
+    display:block;
+    width:100%;
+    height : 10vh;
+    line-height: 10vh;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+.celebrity-flower>a::after{
+    z-index: -1;
+    filter: brightness(0.8); 
+    /* filter 속성값 ... 예시 
+                            filter: blur(5px);
+                            filter: brightness(0.4);
+                            filter: contrast(200%);
+                            filter: drop-shadow(16px 16px 20px blue);
+                            filter: grayscale(50%);
+                            filter: hue-rotate(90deg);
+                            filter: invert(75%);
+                            filter: opacity(25%);
+                            filter: saturate(30%);
+                            filter: sepia(60%); */
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    border-radius: 4px;
+    content:"";
+    background-image: url('../source/images/bg-flowers.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
