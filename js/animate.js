@@ -44,6 +44,12 @@ const observer = new IntersectionObserver((entries, observer) => {
 		if (!targetElement.isIntersecting) return;
         
 		// targetElement.target.style.opacity = 1;
+
+		if (targetElement.target.classList[0] === "greetings") {
+			console.log("properly in")
+			targetElement.target.style.opacity = 1;
+		}
+
 		observer.unobserve(targetElement.target);
     });
 }, options)
@@ -150,7 +156,7 @@ const modalHTMLShowFunc = (accountSex) => {
     let divT1 = document.createElement('div');
     divT1.textContent = onsideName
     strong.appendChild(divT1);
-    strong.appendChild(document.createTextNode(' 마음전하실곳'));
+    strong.appendChild(document.createTextNode(' 마음 전하실 곳'));
     title.appendChild(strong);
 
     // Append h1 to the outer div
